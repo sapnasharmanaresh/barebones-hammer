@@ -19,11 +19,15 @@ h6 {
 }
 
 .giga {
-  @include font-size(76);
+  @include font-size(59 );
   
   
   line-height: 1.2;
   // outline: 1px solid red;
+
+  @include respond-to(small) {
+    @include font-size(76);
+  }
 }
 .mega {
   @include font-size(59);
