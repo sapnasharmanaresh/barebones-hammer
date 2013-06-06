@@ -15,25 +15,28 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
+  @extend %all-caps;
 }
 
 .giga {
-  @include font-size(84);
+  @include font-size(76);
+  
+  
+  line-height: 1.2;
+  // outline: 1px solid red;
 }
 .mega {
-  @include font-size(63);
+  @include font-size(59);
 }
 h1,
 .alpha {
-  @include font-size(39);
+  @include font-size(36);
   
   margin: 0;
 }
 h2,
 .beta {
-  @include font-size(32);
+  @include font-size(30);
 }
 h3,
 .gamma {
@@ -55,7 +58,22 @@ h6,
 p,
 ul,
 ol, {
-  @include font-size(20);
+  @include font-size(18);
+}
+
+p {
+  margin: 0 0 1em;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.lead {
+  @include font-size(22);
+
+  font-style: italic;
+  margin-bottom: 2em;
 }
 
 /* Defaults
@@ -63,7 +81,7 @@ ol, {
 
 body {
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 ::-moz-selection {

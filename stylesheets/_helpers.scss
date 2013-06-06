@@ -6,6 +6,12 @@
   float: left;
 }
 
+%all-caps {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
 %ir {
   background-color: transparent;
   border: 0;
