@@ -27,13 +27,13 @@ h6 {
 }
 h1,
 .alpha {
-  @include font-size(52);
+  @include font-size(39);
   
   margin: 0;
 }
 h2,
 .beta {
-  @include font-size(39);
+  @include font-size(32);
 }
 h3,
 .gamma {
@@ -52,7 +52,9 @@ h6,
 
 }
 
-p {
+p,
+ul,
+ol, {
   @include font-size(20);
 }
 
