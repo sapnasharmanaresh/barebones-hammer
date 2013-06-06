@@ -4,9 +4,17 @@
 }
 
 .l-header {
+  padding-top: em(138);
+  padding-bottom: em(138);
   text-align: center;
+  
+  .giga {
+    margin-bottom: .5em;
+  }
 }
 
 .l-constrained {
-  max-width: rem(600);
+  margin-right: auto;
+  margin-left: auto;
+  max-width: rem(700);
 }

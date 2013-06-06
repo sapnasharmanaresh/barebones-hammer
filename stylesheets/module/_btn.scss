@@ -1,0 +1,15 @@
+.btn {
+  @include font-size(16);
+  
+  // background-color: darken(red, 20%);
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  // color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  // font-weight: 400;
+  letter-spacing: .1em;
+  padding: .5em 1em;
+  // padding-right: .5em;
+  // padding-left: .5em;
+  text-transform: uppercase;
+}
