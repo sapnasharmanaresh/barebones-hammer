@@ -1,0 +1,86 @@
+@import 'normalize';
+
+/* Fonts
+   ========================================================================== */
+
+html, button, input, select, textarea {
+  font-family: Georgia, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+.giga {
+  
+}
+.mega {
+  
+}
+h1,
+.alpha {
+  
+}
+h2,
+.beta {
+  
+}
+h3,
+.gamma {
+
+}
+h4,
+.delta {
+
+}
+h5,
+.epsilon {
+
+}
+h6,
+.zeta {
+
+}
+
+p {
+  @include font-size(20);
+}
+
+/* Defaults
+   ========================================================================== */
+
+body {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+::-moz-selection {
+  @include selection();
+}
+
+::selection {
+  @include selection();
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Forms
+   ========================================================================== */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}

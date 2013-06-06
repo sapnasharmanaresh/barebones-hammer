@@ -1,0 +1,12 @@
+.l-stacked,
+.l-grid {
+  @extend %no-bullets;
+}
+
+.l-header {
+  text-align: center;
+}
+
+.l-constrained {
+  max-width: rem(600);
+}

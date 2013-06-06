@@ -1,0 +1,20 @@
+.nav {
+  @extend %no-bullets;
+
+  > li {
+    display: inline-block;
+  }
+  
+  a {
+    display: inline-block;
+  }
+}
+
+.nav--justify {
+  text-align: justify;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+}
