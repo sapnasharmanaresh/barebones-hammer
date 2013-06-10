@@ -4,22 +4,43 @@
 
   <div class="l-constrained">
     <section>
-      <h1 class="beta">Media</h1>
+      <h2>Forms</h2>
             
-      <section>
-        <h2>Lead Paragraph</h2>
+      <section class="l-section">
+        <h3>Input</h3>
+      
+        <input class="input" type="text" placeholder="search" />
+      </section>
+      
+      <section class="l-section">
+        <h3>Textarea</h3>
+      
+        <textarea class="input"></textarea>
+      </section>
+      
+      <section class="l-section">
+        <h3>Radio</h3>
+      
+        <input id="radio" type="radio">
+        <label class="label-radio" for="radio"></label>
+      </section>
         
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sem mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu ante dictum lacus lobortis vehicula vitae in elit. Morbi vitae sodales est. Integer bibendum id urna id sodales.</p>
-        
-        <h3>Paragraph</h3>
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sem mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu ante dictum lacus lobortis vehicula vitae in elit. Morbi vitae sodales est. Integer bibendum id urna id sodales.</p> 
-        
-        <figure>
-          <!-- @placeholder 700x400 -->
-        </figure>
-        
-        <p>Aliquam dignissim, lorem eu suscipit tincidunt, tellus eros mattis arcu, et condimentum urna leo non magna. Quisque at libero ante. Vestibulum eget consectetur orci, quis mattis augue. Nulla in risus odio. Aliquam erat volutpat. Integer adipiscing est at nisl consectetur, quis lobortis metus placerat. Maecenas consectetur pulvinar lobortis. Donec sed viverra elit, in aliquam magna. Nunc euismod nulla nisi.</p>
+      <section class="l-section">
+        <form class="form">
+          <ol class="l-stacked">
+            <li>
+              <label class="label" for="name">Name</label>
+              <input class="input" id="name" type="text" placeholder="Name" />
+            </li>
+            <li>
+              <label class="label" for="email">Email</label>
+              <input class="input" id="email" type="email" placeholder="Surname" />
+            </li>
+            <li>
+              <input class="btn btn--big" type="submit" />
+            </li>
+          </ol>
+        </form>
       </section>
     </section>
   </div>

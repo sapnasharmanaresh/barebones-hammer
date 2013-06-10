@@ -3,9 +3,21 @@
   width: 100%;
 }
 
+.flag-pull-right,
 .flag-pull-left,
-.flag-pull-right {
+.flag-body {
   display: table-cell;
-  outline: 1px solid red;
   vertical-align: middle;
+}
+
+.flag-pull-left {
+  padding-right: em(20);
+}
+
+.flag-pull-right {
+  padding-left: em(20);
+  
+  img {
+    float: right; /* This is the only way to float it to the right for now */
+  }
 }

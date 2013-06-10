@@ -2,11 +2,22 @@
   @extend %all-caps;
   
   @include font-size(16);
-  
-  border: 1px solid #ccc;
+
+  background-color: #fff;
+  border: 1px solid darken(#f5f5f5, 4%);
   border-radius: 2px;
   letter-spacing: .1em;
-  // @todo temp margin
-  // margin-right: 1em;
+  &:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+  }
+}
+
+.btn--big {
+  padding: 1em 2em;
+}
+
+.btn--small {
   padding: .5em 1em;
 }

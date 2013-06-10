@@ -4,7 +4,7 @@
 }
 
 .l-header {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $primary-color;
   padding-top: 2em;
   padding-bottom: .5em;
   text-align: center;
@@ -19,5 +19,7 @@
 }
 
 .l-section {
-  margin-bottom: em(40, 20);
+  border-bottom: 1px solid $primary-color;
+  margin-bottom: em(60);
+  padding-bottom: em(60);
 }

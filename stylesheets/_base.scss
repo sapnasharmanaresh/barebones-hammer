@@ -78,7 +78,6 @@ ol {
   @include font-size(22);
 
   font-style: italic;
-  margin-bottom: 2em;
 }
 
 /* Defaults
@@ -114,9 +113,15 @@ blockquote {
   }
 }
 
+textarea {
+  line-height: 1.6;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
 }
 
 /* Forms
