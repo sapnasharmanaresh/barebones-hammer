@@ -8,7 +8,7 @@ html, button, input, select, textarea {
   font-family: Lora, serif;
 }
 
-// http://modularscale.com/scale/?px1=20&px2=700&ra1=1.618&ra2=0
+// http://modularscale.com/scale/?px1=18&px2=700&ra1=1.618&ra2=0
 h1,
 h2,
 h3,
@@ -16,6 +16,8 @@ h4,
 h5,
 h6 {
   @extend %all-caps;
+  
+  margin-top: 0;
 }
 
 .giga {
@@ -23,7 +25,6 @@ h6 {
   
   
   line-height: 1.2;
-  // outline: 1px solid red;
 
   @include respond-to(small) {
     @include font-size(76);
@@ -35,8 +36,6 @@ h6 {
 h1,
 .alpha {
   @include font-size(36);
-  
-  margin: 0;
 }
 h2,
 .beta {
@@ -44,11 +43,11 @@ h2,
 }
 h3,
 .gamma {
-
+  @include font-size(24);
 }
 h4,
 .delta {
-
+  @include font-size(18);
 }
 h5,
 .epsilon {
@@ -65,7 +64,9 @@ ol, {
   @include font-size(18);
 }
 
-p {
+p,
+ul,
+ol {
   margin: 0 0 1em;
   
   &:last-child {
@@ -96,8 +97,21 @@ body {
   @include selection();
 }
 
+figure {
+  margin-bottom: em(18);
+}
+
 img {
   vertical-align: middle;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 0;
+  
+  p {
+    @include font-size(22);
+  }
 }
 
 a {

@@ -4,21 +4,22 @@
 
 .media-pull-left {
   float: left;
+  margin-right: em(20, 16);
 }
 
 .media-pull-right {
   float: right;
+  margin-left: em(20, 16);
 }
 
 /*
  * 1. Create new block formatting context in modern browsers
  * 2. Avoid shrink-wrap behaviour of table-cell
- * Alternatively, use `overflow:hidden` if clipping is OK
  * www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
  * facebook.com
 */
 
-.media-content {
+.media-body {
   display: table-cell; /* 1 */
   width: 10000px; /* 2 */
 }

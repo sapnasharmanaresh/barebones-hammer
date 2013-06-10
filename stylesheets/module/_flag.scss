@@ -3,9 +3,9 @@
   width: 100%;
 }
 
-// @todo rename .flag-image to something
-.flag-image,
-.flag-content {
+.flag-pull-left,
+.flag-pull-right {
   display: table-cell;
+  outline: 1px solid red;
   vertical-align: middle;
 }

@@ -8,6 +8,10 @@
   a {
     display: inline-block;
   }
+  
+  .current {
+    font-style: italic;
+  }
 }
 
 .nav--cta {
@@ -16,21 +20,18 @@
   a {
     margin-right: .8em;
     margin-left: .8em;
-    // outline: 1px solid red;
   }
 }
 
 .nav--justify {
-  margin-bottom: 0;
   text-align: justify;
   &:after {
     content: '';
     display: inline-block;
-    // outline: 1px solid red;
     width: 100%;
   }
 }
 
 .nav--primary {
-  margin-bottom: 0;
+
 }
