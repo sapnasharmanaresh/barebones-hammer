@@ -7,6 +7,11 @@
   
   a {
     display: inline-block;
+    outline: 1px solid red;
+    &:hover {
+      background-color: #333;
+      color: #fff;
+    }
   }
   
   .current {
@@ -33,5 +38,11 @@
 }
 
 .nav--primary {
-
+  @extend %all-caps;
+  
+  @include font-size(16);
+  
+  a {
+    margin-right: 1em;
+  }
 }
