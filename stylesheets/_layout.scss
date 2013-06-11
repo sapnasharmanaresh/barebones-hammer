@@ -1,6 +1,21 @@
 .l-stacked,
+.l-inline,
 .l-grid {
   @extend %no-bullets;
+}
+
+.l-inline {
+  > li {
+    display: inline-block;
+  }
+}
+
+.l-grid {
+  @extend %clearfix;
+  
+  > li {
+    float: left;
+  }
 }
 
 .l-header {

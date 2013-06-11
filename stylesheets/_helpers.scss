@@ -6,6 +6,10 @@
   float: left;
 }
 
+%hidden {
+  display: none;
+}
+
 %all-caps {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: .04em;

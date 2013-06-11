@@ -1,5 +1,5 @@
 .form {
-  li {
+  > li {
     margin-bottom: em(40, 20);
   }
 }
@@ -14,48 +14,86 @@
   margin-bottom: 1em;
 }
 
-.input {
-  @include font-size(20);
+.input-replacement {
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(#000, .2) inset;
+  display: block;
+  height: rem(30);
+  position: relative;
+  width: rem(30);
+}
+
+.input-replacement--radio {
+  border-radius: 20em;
+}
+
+.input-replacement--checkbox {
+  border-radius: .2em;
+  text-align: center;
+}
+
+input {
+  &[type=radio],
+  &[type=checkbox] {
+    &:checked {
+      + .input-replacement {
+        background-color: lighten(#ccc, 12%);
+      }
+    }
+  }
   
-  border: 1px solid $primary-color;
-  border-radius: 2px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  outline: none;
-  padding: .75em;
-  width: 100%;
-  &:focus {
-    border-color: darken($primary-color, 50%);
+  &[type=radio] {
+    @extend %hidden;
+    
+    position: relative;
+    &:checked {
+      + .input-replacement--radio {
+        &:after {
+          $dimensions: 60%;
+      
+          background-color: #fff;
+          border-radius: 20em;
+          box-shadow: 0 1px 2px rgba(#000, .2);
+          content: '';
+          height: $dimensions;
+          margin-top: -#{($dimensions / 2)};
+          margin-left: -#{($dimensions / 2)};
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: $dimensions;
+        }
+      }
+    }
+  }
+  &[type=checkbox] {
+    @extend %hidden;
+    
+    position: relative;
+    &:checked {
+      + .input-replacement--checkbox {
+        &:after {
+          @include font-size(20);
+          
+          color: #fff;
+          content: '✔';
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          text-shadow: 0 1px 2px rgba(#000, .2);
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
-.label-radio {
-  background-color: #fff;
-  border-radius: 20em;
-  box-shadow: 0 1px 2px rgba(#000, .2) inset;
-  display: block;
-  height: em(40);
-  position: relative;
-  width: em(40);
-}
-
-input[type=radio] {
-  display: none;
-  &:checked {
-    + .label-radio {
-      background-color: #ccc;
-      &:after {
-        background-color: #000;
-        border-radius: 20em;
-        content: '';
-        height: 50%;
-        margin-top: -25%;
-        margin-left: -25%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 50%
-      }
+.input-radio,
+.input-checkbox {
+  span {
+    &:last-child {
+      padding-right: em(60, 20);
     }
   }
 }

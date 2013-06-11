@@ -5,39 +5,108 @@
   <div class="l-constrained">
     <section>
       <h2>Forms</h2>
-            
+
       <section class="l-section">
         <h3>Input</h3>
       
-        <input class="input" type="text" placeholder="search" />
+        <input type="text" placeholder="Search">
       </section>
       
       <section class="l-section">
         <h3>Textarea</h3>
       
-        <textarea class="input"></textarea>
+        <textarea placeholder="Message"></textarea>
+      </section>
+      
+      <section class="l-section">
+        <h3>Checkbox</h3>
+        
+        <input id="checkbox-1" name="checkboxes" type="checkbox" />
+        <label class="input-replacement input-replacement--checkbox" for="checkbox-1"></label>
       </section>
       
       <section class="l-section">
         <h3>Radio</h3>
-      
-        <input id="radio" type="radio">
-        <label class="label-radio" for="radio"></label>
+  
+        <input id="radio-1" name="radios" type="radio">
+        <label class="input-replacement input-replacement--radio" for="radio-1"></label>
       </section>
         
       <section class="l-section">
-        <form class="form">
-          <ol class="l-stacked">
+        <form>
+          <ol class="l-stacked form">
             <li>
               <label class="label" for="name">Name</label>
-              <input class="input" id="name" type="text" placeholder="Name" />
+              <input id="name" type="text" placeholder="Name">
             </li>
+            
             <li>
               <label class="label" for="email">Email</label>
-              <input class="input" id="email" type="email" placeholder="Surname" />
+              <input id="email" type="email" placeholder="Surname">
             </li>
+            
             <li>
-              <input class="btn btn--big" type="submit" />
+              <label class="label" for="message">Message</label>
+              <textarea class="input" placeholder="message"></textarea>
+            </li>
+            
+            <li>
+              <label class="label">Do you use Facebook or Twitter</label>
+              
+              <ul class="l-inline">
+                <li>
+                  <label class="input-checkbox" for="facebook">
+                    <span class="flag-pull-left">
+                      <input id="facebook" name="checkboxes" type="checkbox" />
+                      <label class="input-replacement input-replacement--checkbox" for="facebook"></label>
+                    </span>
+                  
+                    <span class="flag-body">Facebook</span>
+                  </label>
+                </li>
+              
+                <li>
+                  <label class="input-checkbox" for="twitter">
+                    <span class="flag-pull-left">
+                      <input id="twitter" name="checkboxes" type="checkbox" />
+                      <label class="input-replacement input-replacement--checkbox" for="twitter"></label>
+                    </span>
+                  
+                    <span class="flag-body">Twitter</span>
+                  </label>
+                </li>
+              </ul>
+            </li>
+            
+            <li>
+              <label class="label">Do you use Facebook or Twitter</label>
+              
+              <ul class="l-inline">
+                <li>
+                  <label class="input-radio" for="yes">
+                    <span class="flag-pull-left">
+                      <input id="yes" name="radios" type="radio">
+                      <label class="input-replacement input-replacement--radio" for="yes"></label>
+                    </span>
+                  
+                    <span class="flag-body">Yes</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="input-radio" for="no">
+                    <span class="flag-pull-left">
+                      <input id="no" name="radios" type="radio">
+                      <label class="input-replacement input-replacement--radio" for="no"></label>
+                    </span>
+                  
+                    <span class="flag-body">No</span>
+                  </label>
+                </li>
+              </ul>
+            </li>
+            
+            <li>
+              <input class="btn btn--big" type="submit">
             </li>
           </ol>
         </form>

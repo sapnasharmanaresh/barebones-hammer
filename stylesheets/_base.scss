@@ -124,6 +124,14 @@ a {
           transition: all .25s ease;
 }
 
+::-webkit-input-placeholder {
+   color: red;
+}
+
+::-moz-placeholder {
+   color: red;
+}
+
 /* Forms
    ========================================================================== */
 
@@ -135,4 +143,31 @@ fieldset {
 
 textarea {
   resize: vertical;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=url],
+textarea {
+  @include font-size(20);
+  
+  border: 1px solid $primary-color;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #ccc;
+  outline: none;
+  padding: .75em;
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
+  width: 100%;
+  &:focus {
+    border-color: darken($primary-color, 50%);
+    color: inherit;
+  }
 }
