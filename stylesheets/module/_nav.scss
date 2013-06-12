@@ -1,4 +1,5 @@
 .nav {
+  // @extend %all-caps;
   @extend %no-bullets;
 
   > li {
@@ -6,43 +7,27 @@
   }
   
   a {
+    // border-radius: 3px;
     display: inline-block;
-    outline: 1px solid red;
+    padding-right: .5em;
+    padding-left: .5em;
     &:hover {
-      background-color: #333;
-      color: #fff;
+      // color: #fff;
+      text-decoration: underline;
     }
   }
   
   .current {
-    font-style: italic;
+    // font-style: italic;
+    // text-decoration: underline;
   }
 }
 
-.nav--cta {
-  margin-bottom: 0;
-  
-  a {
-    margin-right: .8em;
-    margin-left: .8em;
-  }
-}
-
-.nav--justify {
+.nav--primary {
   text-align: justify;
   &:after {
     content: '';
     display: inline-block;
     width: 100%;
-  }
-}
-
-.nav--primary {
-  @extend %all-caps;
-  
-  @include font-size(16);
-  
-  a {
-    margin-right: 1em;
   }
 }
