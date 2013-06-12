@@ -9,18 +9,6 @@ html, button, input, select, textarea {
 }
 
 // http://modularscale.com/scale/?px1=18&px2=700&ra1=1.618&ra2=0
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @extend %all-caps;
-  
-  margin-top: 0;
-  // text-align: center;
-}
-
 .giga {
   @include font-size(59 );
   
@@ -59,11 +47,26 @@ h6,
 
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %all-caps;
+  
+  margin-top: 0;
+}
+
 p,
 ul,
 ol,
 dl {
-  @include font-size(18);
+  // @include font-size(18);
+  
+  @include respond-to(small) {
+    @include font-size(18);
+  }
 }
 
 p,
@@ -99,30 +102,13 @@ body {
   @include selection();
 }
 
-table {
-  @include font-size(18);
-  
-  // border: 1px solid $primary-color;
-  table-layout: fixed;
-  width: 100%;
-}
-
-thead {
-  @extend %all-caps;
-  
-  background-color: #f5f5f5;
-}
-
-td {
-  border: 1px solid $primary-color;
-  padding: 1em;
-}
-
 figure {
   margin-bottom: em(18);
 }
 
 img {
+  height: auto;
+  max-width: 100%;
   vertical-align: middle;
 }
 
