@@ -5,7 +5,7 @@
 
 html, button, input, select, textarea {
   color: #333;
-  font-family: Lora, serif;
+  font-family: $serif;
 }
 
 // http://modularscale.com/scale/?px1=18&px2=700&ra1=1.618&ra2=0
@@ -61,13 +61,15 @@ h6,
 
 p,
 ul,
-ol, {
+ol,
+dl {
   @include font-size(18);
 }
 
 p,
 ul,
-ol {
+ol,
+dl {
   margin: 0 0 1em;
   
   &:last-child {
@@ -97,6 +99,25 @@ body {
   @include selection();
 }
 
+table {
+  @include font-size(18);
+  
+  // border: 1px solid $primary-color;
+  table-layout: fixed;
+  width: 100%;
+}
+
+thead {
+  @extend %all-caps;
+  
+  background-color: #f5f5f5;
+}
+
+td {
+  border: 1px solid $primary-color;
+  padding: 1em;
+}
+
 figure {
   margin-bottom: em(18);
 }
@@ -112,10 +133,6 @@ blockquote {
   p {
     @include font-size(22);
   }
-}
-
-textarea {
-  line-height: 1.6;
 }
 
 a {
@@ -143,6 +160,7 @@ fieldset {
 }
 
 textarea {
+  line-height: 1.6;
   resize: vertical;
 }
 

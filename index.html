@@ -1,10 +1,268 @@
 <!-- @include _head -->
 <!-- @include _header -->
 
-    <main>
-      <div class="l-constrained">
-        <p>I've included a lot of <a href="#none">abstrast classes</a> that I regularly use for my daily web projects. Instead of including jQuery I'm using Zepto because I've realised most of the time I'm just adding toggling classes. Did I say it's always a Hammer template as well. I've included very basic styling to allow you to customise it yourself.</p>
-      </div>
-    </main>
+    <div class="l-constrained">
+      <section class="l-section" id="typography">
+        <h2>Typography</h2>
+              
+        <section class="l-subsection">
+          <h3>Paragraph</h3>
+          
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sem mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu ante dictum lacus lobortis vehicula vitae in elit. Morbi vitae sodales est. Integer bibendum id urna id sodales.</p>
+          
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sem mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu ante dictum lacus lobortis vehicula vitae in elit. Morbi vitae sodales est. Integer bibendum id urna id sodales.</p>
+          
+          <p>Aliquam dignissim, lorem eu suscipit tincidunt, tellus eros mattis arcu, et condimentum urna leo non magna. Quisque at libero ante. Vestibulum eget consectetur orci, quis mattis augue. Nulla in risus odio. Aliquam erat volutpat. Integer adipiscing est at nisl consectetur, quis lobortis metus placerat. Maecenas consectetur pulvinar lobortis. Donec sed viverra elit, in aliquam magna. Nunc euismod nulla nisi.</p>
+        </section>
+          
+        <section class="l-subsection">
+          <h3>Figure</h3>
+          
+          <figure>
+            <!-- @placeholder 700x400 -->
+          </figure>
+        </section>
+        
+        <section class="l-subsection">
+          <h3>Unordered List</h3>
+          
+          <ul>
+            <li>Fruit
+              
+              <ul>
+                <li>Apple</li>
+                <li>Orange</li>
+                <li>Banana</li>
+              </ul>
+            </li>
+            <li>Vegetable</li>
+            <li>Fish</li>
+            <li>Nuts</li>
+          </ul>
+        </section>
+          
+        <section class="l-subsection">
+          <h3>Ordered List</h3>
+          
+          <ol>
+            <li>This is an ordered list.</li>
+            <li>This is the second item, which contains a sub list
+              <ol>
+                <li>This is the sub list, which is also ordered.</li>
+                <li>It has two items.</li>
+              </ol>
+            </li>
+            <li>This is the final list item.</li>
+          </ol>
+        </section>
+        
+        <section class="l-subsection">
+          <h1>h1 header</h1>
+          
+          <h2>h2 header</h2>
+        
+          <h3>h3 header</h2>
+        
+          <h4>h4 header</h4>
+        
+          <h5>h5 header</h5>
+          
+          <h6>h6 header</h6>
+        </section>
+        
+        <section class="l-subsection">
+          <h3>quote</h3>
+        
+          <blockquote>
+            <p>&ldquo;There is only one god and his name is Death. And there is only one thing we say to Death: "Not today".&rdquo;</p>
+          </blockquote>
+        </section>
+        
+        <section class="l-subsection">
+          <h3>Definition List</h3>
+          
+          <dl>
+            <dt>Definition Title</dt>
+            <dd>Definition Description</dd>
+          </dl>
+        </section>
+      </section>
+      
+      <section class="l-section" id="navigation">
+        <h2>Navigation</h2>
+        
+        <section class="l-subsection">
+          <ul class="nav nav--primary">
+            <li><a href="#none">Home</a></li>
+            <li><a href="#none">About</a></li>
+            <li><a href="#none">Contact</a></li>
+            <li><a href="#none">Gallery</a></li>
+          </ul>
+        </section>
+        
+        <section class="l-subsection">
+          <ul class="l-stacked nav">
+            <li><a href="#none">Home</a></li>
+            <li><a href="#none">About</a></li>
+            <li><a href="#none">Contact</a></li>
+            <li><a href="#none">Gallery</a></li>
+          </ul>
+        </section>
+      </section>
+      
+      <section class="l-section" id="table">
+        <h2>Table</h2>
+        
+        <table class="table">
+          <thead>
+            <tr>
+              <td>Position</td>
+              <td>Team</td>
+              <td>Played</td>
+              <td>Points</td>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Man Utd</td>
+              <td>38</td>
+              <td>89</td>
+            </tr>
+            
+            <tr>
+              <td>2</td>
+              <td>Man City</td>
+              <td>38</td>
+              <td>78</td>
+            </tr>
+            
+            <tr>
+              <td>3</td>
+              <td>Chelsea</td>
+              <td>38</td>
+              <td>75</td>
+            </tr>
+            
+            <tr>
+              <td>4</td>
+              <td>Arsenal</td>
+              <td>38</td>
+              <td>73</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <section class="l-section" id="form">
+        <h2>Forms</h2>
+
+        <section class="l-subsection">
+          <h3>Input</h3>
+        
+          <input type="text" placeholder="Search">
+        </section>
+        
+        <section class="l-subsection">
+          <h3>Textarea</h3>
+        
+          <textarea placeholder="Message"></textarea>
+        </section>
+        
+        <section class="l-subsection">
+          <h3>Checkbox</h3>
+          
+          <input id="checkbox-1" name="checkboxes" type="checkbox" />
+          <label class="input-replacement input-replacement--checkbox" for="checkbox-1"></label>
+        </section>
+        
+        <section class="l-subsection">
+          <h3>Radio</h3>
+    
+          <input id="radio-1" name="radios" type="radio">
+          <label class="input-replacement input-replacement--radio" for="radio-1"></label>
+        </section>
+          
+        <section class="l-subsection">
+          <form>
+            <ol class="l-stacked form">
+              <li>
+                <label class="label" for="name">Name</label>
+                <input id="name" type="text" placeholder="Name">
+              </li>
+              
+              <li>
+                <label class="label" for="email">Email</label>
+                <input id="email" type="email" placeholder="Surname">
+              </li>
+              
+              <li>
+                <label class="label" for="message">Message</label>
+                <textarea class="input" placeholder="Message"></textarea>
+              </li>
+              
+              <li>
+                <label class="label">Do you use Facebook or Twitter</label>
+                
+                <ul class="l-inline">
+                  <li>
+                    <label class="input-checkbox" for="facebook">
+                      <span class="flag-pull-left">
+                        <input id="facebook" name="checkboxes" type="checkbox" />
+                        <label class="input-replacement input-replacement--checkbox" for="facebook"></label>
+                      </span>
+                    
+                      <span class="flag-body">Facebook</span>
+                    </label>
+                  </li>
+                
+                  <li>
+                    <label class="input-checkbox" for="twitter">
+                      <span class="flag-pull-left">
+                        <input id="twitter" name="checkboxes" type="checkbox" />
+                        <label class="input-replacement input-replacement--checkbox" for="twitter"></label>
+                      </span>
+                    
+                      <span class="flag-body">Twitter</span>
+                    </label>
+                  </li>
+                </ul>
+              </li>
+              
+              <li>
+                <label class="label">Do you use Facebook or Twitter</label>
+                
+                <ul class="l-inline">
+                  <li>
+                    <label class="input-radio" for="yes">
+                      <span class="flag-pull-left">
+                        <input id="yes" name="radios" type="radio">
+                        <label class="input-replacement input-replacement--radio" for="yes"></label>
+                      </span>
+                    
+                      <span class="flag-body">Yes</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="input-radio" for="no">
+                      <span class="flag-pull-left">
+                        <input id="no" name="radios" type="radio">
+                        <label class="input-replacement input-replacement--radio" for="no"></label>
+                      </span>
+                    
+                      <span class="flag-body">No</span>
+                    </label>
+                  </li>
+                </ul>
+              </li>
+              
+              <li>
+                <input class="btn btn--big" type="submit">
+              </li>
+            </ol>
+          </form>
+        </section>
+      </section>
     
 <!-- @include _footer -->
