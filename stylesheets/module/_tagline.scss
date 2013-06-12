@@ -1,3 +1,11 @@
 .tagline {
-  margin-bottom: em(60);
+  margin-bottom: em(44, 20);
+
+  p {
+    // @include font-size(30)
+    // @extend %all-caps;
+    
+    // font-style: normal;
+    // outline: 1px solid red;
+  }
 }

@@ -21,12 +21,12 @@
 .l-header {
   border-bottom: 1px solid $primary-color;
   padding-top: 2em;
-  padding-bottom: .5em;
+  padding-bottom: .6em;
   text-align: center;
 }
 
 .l-footer {
-  // border-top: 1px solid $primary-color;
+  padding-bottom: em(60, 16);
 }
 
 .l-constrained {
@@ -39,18 +39,10 @@
 
 .l-section {
   border-bottom: 1px solid $primary-color;
-  margin-bottom: em(100);
-  padding-bottom: em(100);
-}
-
-.l-subsection {
-  border-bottom: 1px solid $primary-color;
-  margin-bottom: em(100);
-  padding-bottom: em(100);
-  // outline: 1px solid red;
-  &:last-of-type {
-    border: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
+  margin-bottom: em(60);
+  padding-bottom: em(60);
+  
+  > h2 {
+    margin-bottom: em(30, 30);
   }
 }

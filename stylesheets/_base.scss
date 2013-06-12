@@ -6,6 +6,7 @@
 html, button, input, select, textarea {
   color: #333;
   font-family: $serif;
+  text-rendering: optimizeLegibility;
 }
 
 // http://modularscale.com/scale/?px1=18&px2=700&ra1=1.618&ra2=0
@@ -53,8 +54,8 @@ h3,
 h4,
 h5,
 h6 {
-  @extend %all-caps;
-  
+  font-family: $sans-serif;
+    
   margin-top: 0;
 }
 
@@ -62,8 +63,6 @@ p,
 ul,
 ol,
 dl {
-  // @include font-size(18);
-  
   @include respond-to(small) {
     @include font-size(18);
   }
@@ -113,8 +112,10 @@ img {
 }
 
 blockquote {
+  border-left: 1px solid $primary-color;
   font-style: italic;
-  margin: 0;
+  margin: 0 0 em(20, 16);
+  padding-left: em(20, 16);
   
   p {
     @include font-size(22);
@@ -129,11 +130,11 @@ a {
 }
 
 ::-webkit-input-placeholder {
-   color: red;
+   color: #ccc;
 }
 
 ::-moz-placeholder {
-   color: red;
+   color: #ccc;
 }
 
 /* Forms
