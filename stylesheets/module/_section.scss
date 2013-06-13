@@ -1,6 +1,10 @@
 .section-sub {
-  margin-bottom: em(63, 16);
+  margin-bottom: em(40);
   &:last-of-type {
     margin-bottom: 0;
+  }
+  
+  @include respond-to(small) {
+    margin-bottom: em(63);
   }
 }
