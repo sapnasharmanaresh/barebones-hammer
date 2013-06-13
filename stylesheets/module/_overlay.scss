@@ -1,19 +1,50 @@
 .overlay {
   background-color: rgba(#000, .8);
-  display: none;
   height: 100%;
   outline: 1px solid red;
-  position: absolute;
+  position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  &:target {
+    
+  }
+  &:target,
   &.is-shown {
-    display: block;
+    -webkit-animation-name: fade-in;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-fill-mode: both;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 }
 
+.overlay-center {
+  margin-top: -#{em(144 / 2)};
+  position: absolute;
+  top: 50%;
+}
+
 .overlay-modal {
+  -webkit-animation-name: fade-in, scale-up;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-delay: .5s, .25s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-fill-mode: both;
   background-color: #fff;
   border-radius: 4px;
+  margin-right: auto;
+  margin-left: auto;
+  outline: 1px solid red;
   padding: 1em;
+  width: 50%;
 }
