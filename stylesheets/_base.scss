@@ -7,26 +7,27 @@ html, button, input, select, textarea {
   color: #333;
   font-family: $body;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  // text-rendering: optimizeLegibility;
 }
 
 // http://modularscale.com/scale/?px1=18&px2=700&ra1=1.618&ra2=0
 .giga {
-  @include font-size(59 );
-  
+  @include font-size(59);
   
   line-height: 1.2;
 
   @include respond-to(small) {
-    @include font-size(76);
+    @include font-size(88);
+    
+    letter-spacing: -.03em;
   }
 }
 .mega {
-  @include font-size(59);
+  @include font-size(63);
 }
 h1,
 .alpha {
-  @include font-size(36);
+  @include font-size(54);
 }
 h2,
 .beta {
@@ -38,11 +39,11 @@ h3,
 }
 h4,
 .delta {
-  @include font-size(18);
+  @include font-size(21);
 }
 h5,
 .epsilon {
-
+  @include font-size(18);
 }
 h6,
 .zeta {
@@ -65,7 +66,7 @@ ul,
 ol,
 dl {
   @include respond-to(small) {
-    @include font-size(22);
+    @include font-size(21);
   }
 }
 
