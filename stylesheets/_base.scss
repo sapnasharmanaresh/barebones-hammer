@@ -12,14 +12,13 @@ html, button, input, select, textarea {
 
 // http://modularscale.com/scale/?px1=18&px2=700&ra1=1.618&ra2=0
 .giga {
-  @include font-size(59);
+  @include font-size(54);
   
+  letter-spacing: -.03em;
   line-height: 1.2;
 
   @include respond-to(small) {
     @include font-size(88);
-    
-    letter-spacing: -.03em;
   }
 }
 .mega {
@@ -27,27 +26,43 @@ html, button, input, select, textarea {
 }
 h1,
 .alpha {
-  @include font-size(54);
+  @include font-size(40);
 }
 h2,
 .beta {
-  @include font-size(30);
+  @include font-size(24);
+  
+  @include respond-to(small) {
+    @include font-size(30);
+  }
 }
 h3,
 .gamma {
-  @include font-size(24);
+  @include font-size(21);
+  
+  @include respond-to(small) {
+    @include font-size(24);
+  }
 }
 h4,
 .delta {
-  @include font-size(21);
+  @include font-size(18);
+  
+  @include respond-to(small) {
+    @include font-size(21);
+  }
 }
 h5,
 .epsilon {
-  @include font-size(18);
+  @include font-size(16);
+  
+  @include respond-to(small) {
+    @include font-size(18);
+  }
 }
 h6,
 .zeta {
-
+  @include font-size(16);
 }
 
 h1,
@@ -58,7 +73,7 @@ h5,
 h6 {
   font-family: $title;
     
-  margin-top: 0;
+  margin: 0 0 .5em;
 }
 
 p,
@@ -82,17 +97,23 @@ dl {
 }
 
 .lead {
-  @include font-size(24);
+  @include font-size(20);
 
-  font-style: italic;
+  @include respond-to(small) {
+    @include font-size(24);
+  }
 }
 
 /* Defaults
    ========================================================================== */
 
+html {
+  background-color: #fff;
+}
+
 body {
   font-size: 1em;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 ::-moz-selection {
@@ -104,7 +125,7 @@ body {
 }
 
 figure {
-  margin-bottom: em(18);
+  margin-bottom: em(21, 16);
 }
 
 img {
@@ -114,18 +135,34 @@ img {
 }
 
 blockquote {
-  border-left: 1px solid $primary-color;
   font-style: italic;
-  margin: 0 0 em(20, 16);
-  padding-left: em(20, 16);
+  margin-left: 0;
+  // padding-left: em(42, 16);
   
   p {
-    @include font-size(22);
+    @include font-size(20);
+    
+    @include respond-to(small) {
+      @include font-size(24);
+    }
+  }
+  
+  .cite {
+    @include font-size(16);
+    
+    font-style: normal;
+    &:before {
+      content: '\2014';
+    }
+    
+    @include respond-to(small) {
+      @include font-size(21);
+    }
   }
 }
 
 a {
-  color: inherit;
+  color: #C00;
   text-decoration: none;
   -webkit-transition: all .25s ease;
           transition: all .25s ease;

@@ -3,20 +3,36 @@
 
     <div class="l-constrained">
       <section class="l-section" id="typography">
-        <h2>Typography</h2>
-          
         <div class="section-sub">
-          <figure>
-            <!-- @placeholder 760x400 -->
-          </figure>
+          <h2>Paragraph</h2>
           
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sem mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu ante dictum lacus lobortis vehicula vitae in elit.</p>
           
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sem mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu ante dictum lacus lobortis vehicula vitae in elit. Morbi vitae sodales est. Integer bibendum id urna id sodales.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. <a href="#none">Suspendisse dictum feugiat nisl ut dapibus</a>. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus.</p> 
+          
+          <p>In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum.</p>
         </div>
         
         <div class="section-sub">
-          <h3>List</h3>
+          <h2>Heading</h2>
+          
+          <table>
+            <tr>
+              <td><h1>Heading 1</h1></td>
+              <td><h2>Heading 2</h2></td>
+              <td><h3>Heading 3</h3></td>
+            </tr>
+            
+            <tr>
+              <td><h4>Heading 4</h4></td>
+              <td><h5>Heading 5</h5></td>
+              <td><h6>Heading 6</h6></td>
+            </tr>
+          </table>
+        </div>
+        
+        <div class="section-sub">
+          <h2>List</h2>
           
           <ol>
             <li>This is an ordered list.</li>
@@ -50,7 +66,7 @@
         </div>
         
         <div class="section-sub">
-          <h3>Quote</h3>
+          <h2>Blockquote</h2>
                 
           <blockquote>
             <p>&ldquo;There is only one god and his name is Death. And there is only one thing we say to Death: "Not today".&rdquo;</p>
@@ -58,30 +74,13 @@
             <p class="cite">Game of Thrones</p>
           </blockquote>
         </div>
+      </section>
       
-        <div class="section-sub">
-          <div class="pane">
-            <h1>Heading &lt;h1&gt;</h1>
-            
-            <h2>Heading &lt;h2&gt;</h2>
-                  
-            <h3>Heading &lt;h3&gt;</h2>
-                  
-            <h4>Heading &lt;h4&gt;</h4>
-                  
-            <h5>Heading &lt;h5&gt;</h5>
-            
-            <h6>Heading &lt;h6&gt;</h6>
-          </div>
-        </div>
-      </section>
-            
-      <!--
       <section class="l-section" id="navigation">
-        <h2>Navigation</h2>
-        
-        <section class="l-subsection">
-          <ul class="nav nav--primary">
+        <section class="section-sub">
+          <h2>Inline</h2>
+          
+          <ul class="nav nav--inline">
             <li><a href="#none">Home</a></li>
             <li><a href="#none">About</a></li>
             <li><a href="#none">Contact</a></li>
@@ -89,8 +88,10 @@
           </ul>
         </section>
         
-        <section class="l-subsection">
-          <ul class="l-stacked nav">
+        <section class="section-sub">
+          <h2>Stacked</h2>
+          
+          <ul class="nav nav--stacked">
             <li><a href="#none">Home</a></li>
             <li><a href="#none">About</a></li>
             <li><a href="#none">Contact</a></li>
@@ -98,10 +99,9 @@
           </ul>
         </section>
       </section>
-      -->
       
       <section class="l-section" id="table">
-        <h2 class="title">Table</h2>
+        <h2>Table</h2>
         
         <table class="table">
           <thead>
@@ -146,22 +146,20 @@
       </section>
       
       <section class="l-section" id="form">
-        <h2 class="title">Forms</h2>
-
         <section class="section-sub">
-          <h3>Input</h3>
+          <h2>Input</h2>
         
           <input type="text" placeholder="Search">
         </section>
         
         <section class="section-sub">
-          <h3>Textarea</h3>
+          <h2>Textarea</h2>
         
           <textarea placeholder="Message"></textarea>
         </section>
         
         <section class="section-sub">
-          <h3>Checkbox</h3>
+          <h2>Checkbox</h2>
     
           <ul class="l-inline">
             <li>
@@ -189,7 +187,7 @@
         </section>
         
         <section class="section-sub">
-          <h3>Radio</h3>
+          <h2>Radio</h2>
     
           <ul class="l-inline">
             <li>
@@ -214,6 +212,12 @@
             </li>
           </ul>
         </section>
+      </section>
+      
+      <section class="l-section" id="css">
+        <h2>CSS</h2>
+        
+        <p>Barebones uses a mobile first approach to styles.</p>
       </section>
     
 <!-- @include _footer -->
