@@ -5,7 +5,7 @@
 
 html, button, input, select, textarea {
   color: #333;
-  font-family: $serif;
+  font-family: $body;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -55,7 +55,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $sans-serif;
+  font-family: $title;
     
   margin-top: 0;
 }
@@ -65,7 +65,7 @@ ul,
 ol,
 dl {
   @include respond-to(small) {
-    @include font-size(18);
+    @include font-size(22);
   }
 }
 
@@ -81,7 +81,7 @@ dl {
 }
 
 .lead {
-  @include font-size(22);
+  @include font-size(24);
 
   font-style: italic;
 }
