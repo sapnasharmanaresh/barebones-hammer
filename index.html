@@ -2,8 +2,30 @@
 <!-- @include _header -->
 
     <div class="l-constrained">
+      <section class="l-section" id="about">
+        <div class="section section--main">
+          <h2>About</h2>
+          
+          <p>I've included a lot of <a href="https://github.com/kachunchau/scss-boilerplate">abstrast classes</a> that I regularly use for my daily web projects. Instead of including jQuery I'm using Zepto because I've realised most of the time I'm just adding toggling classes. Did I say it's a Hammer template as well. I've included some basic styling to allow you to extend it yourself.</p>
+        </div>
+        
+        <div class="section section--main">
+          <h2>Features</h2>
+          
+          <ul>
+            <li>Uses 'normalize.css' by <a href="ttps://github.com/necolas">Nicolas Gallagher</a></li>
+            <li>Uses Zepto instead of jQuery</li>
+            <li>SMACSS folder layout</li>
+            <li>Added module abstracts</li>
+            <li>Px to em and px to rem mixin
+            <li>Media object by <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code">Nicole Sullivan</a></li>
+            <li>Flag object by <a href="http://csswizardry.com/2013/05/the-flag-object/">Harry Roberts</a></li>
+          </ul>
+        </div>
+      </section>
+      
       <section class="l-section" id="typography">
-        <div class="section-sub">
+        <section class="section section--main">
           <h2>Paragraph</h2>
           
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sem mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu ante dictum lacus lobortis vehicula vitae in elit.</p>
@@ -11,9 +33,9 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. <a href="#none">Suspendisse dictum feugiat nisl ut dapibus</a>. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus.</p> 
           
           <p>In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum.</p>
-        </div>
+        </section>
         
-        <div class="section-sub">
+        <section class="section section--main">
           <h2>Heading</h2>
           
           <table>
@@ -29,9 +51,9 @@
               <td><h6>Heading 6</h6></td>
             </tr>
           </table>
-        </div>
+        </section>
         
-        <div class="section-sub">
+        <section class="section section--main">
           <h2>List</h2>
           
           <ol>
@@ -63,9 +85,9 @@
             <dt>Definition Title</dt>
             <dd>Definition Description</dd>
           </dl>
-        </div>
+        </section>
         
-        <div class="section-sub">
+        <section class="section section--main">
           <h2>Blockquote</h2>
                 
           <blockquote>
@@ -73,11 +95,11 @@
           
             <p class="cite">Game of Thrones</p>
           </blockquote>
-        </div>
+        </section>
       </section>
       
       <section class="l-section" id="navigation">
-        <section class="section-sub">
+        <section class="section section--main">
           <h2>Inline</h2>
           
           <ul class="nav nav--inline">
@@ -88,7 +110,7 @@
           </ul>
         </section>
         
-        <section class="section-sub">
+        <section class="section section--main">
           <h2>Stacked</h2>
           
           <ul class="nav nav--stacked">
@@ -146,19 +168,19 @@
       </section>
       
       <section class="l-section" id="form">
-        <section class="section-sub">
+        <section class="section section--main">
           <h2>Input</h2>
         
           <input type="text" placeholder="Search">
         </section>
         
-        <section class="section-sub">
+        <section class="section section--main">
           <h2>Textarea</h2>
         
           <textarea placeholder="Message"></textarea>
         </section>
         
-        <section class="section-sub">
+        <section class="section section--main">
           <h2>Checkbox</h2>
     
           <ul class="l-inline">
@@ -186,7 +208,7 @@
           </ul>
         </section>
         
-        <section class="section-sub">
+        <section class="section section--main">
           <h2>Radio</h2>
     
           <ul class="l-inline">
@@ -217,11 +239,35 @@
       <section class="l-section" id="button">
         <h2>Button</h2>
         
-        <a class="btn btn--big" href="#none">Button</a>
+        <div class="flag section section--sub">
+          <div class="flag-pull-left">
+            <a class="btn btn--big" href="#none">Button</a>
+          </div>
         
-        <a class="btn btn--small" href="#none">Button</a>
+          <div class="flag-body">
+            <p>Big Button</p>
+          </div>
+        </div>
         
-        <a class="btn btn--small" href="#none">Button</a>
+        <div class="flag section section--sub">
+          <div class="flag-pull-left">
+            <a class="btn" href="#none">Button</a>
+          </div>
+        
+          <div class="flag-body">
+            <p>Default Button</p>
+          </div>
+        </div>
+        
+        <div class="flag section section--sub">
+          <div class="flag-pull-left">
+            <a class="btn btn--small" href="#none">Button</a>
+          </div>
+        
+          <div class="flag-body">
+            <p>Small Button</p>
+          </div>
+        </div>
       </section>
     
 <!-- @include _footer -->

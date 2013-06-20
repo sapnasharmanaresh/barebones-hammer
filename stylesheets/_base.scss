@@ -34,6 +34,8 @@ h2,
   
   @include respond-to(small) {
     @include font-size(30);
+    
+    letter-spacing: -.05em;
   }
 }
 h3,
@@ -73,7 +75,7 @@ h5,
 h6 {
   font-family: $title;
     
-  margin: 0 0 .7em;
+  margin: 0 0 .5em;
 }
 
 p,
@@ -114,6 +116,14 @@ html {
 body {
   font-size: 1em;
   line-height: 1.5;
+  
+  &.test {
+    // background-color: red;
+    overflow: hidden;
+  }
+}
+
+.is-open {
 }
 
 ::-moz-selection {
@@ -162,10 +172,13 @@ blockquote {
 }
 
 a {
-  color: #C00;
+  color: #387BA8;
   text-decoration: none;
   -webkit-transition: all .25s ease;
           transition: all .25s ease;
+  &:hover {
+    color: inherit;
+  }
 }
 
 ::-webkit-input-placeholder {
@@ -203,7 +216,7 @@ textarea {
   
   border: 1px solid $primary-color;
   border-radius: 2px;
-  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #ccc;
   outline: none;

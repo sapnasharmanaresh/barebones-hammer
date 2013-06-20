@@ -21,9 +21,13 @@
 .l-header {
   background-color: #fff;
   border-bottom: 1px solid $primary-color;
-  box-shadow: 0 1px 2px rgba(#000, .03);
+  box-shadow: 0 1px 2px rgba(#000, .05);
   padding-top: 1.8em;
   padding-bottom: .2em;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .l-footer {
@@ -33,7 +37,7 @@
 .l-constrained {
   margin-right: auto;
   margin-left: auto;
-  max-width: rem(720);
+  max-width: rem(800);
   padding-right: em(18);
   padding-left: em(18);
 }

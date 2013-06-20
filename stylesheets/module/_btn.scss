@@ -1,13 +1,14 @@
 .btn {
   @extend %all-caps;
   
-  @include font-size(16);
+  @include font-size(21);
 
   background-color: #fff;
   border: 1px solid darken(#f5f5f5, 4%);
   border-radius: 4px;
   color: #333;
   display: inline-block;
+  padding: .75em 1.5em;
   &:hover {
     background-color: #333;
     border-color: #333;
@@ -16,13 +17,13 @@
 }
 
 .btn--big {
-  padding: .5em 1em;
+  @include font-size(24);
   
-  @include respond-to(small) {
-    padding: 1em 2em;
-  }
+  padding: .8em 1.6em;
 }
 
 .btn--small {
+  @include font-size(18);
+  
   padding: .5em 1em;
 }

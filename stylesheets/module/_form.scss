@@ -75,7 +75,7 @@ input {
     &:checked {
       + .input-replacement--checkbox {
         &:after {
-          @include font-size(20);
+          @include font-size(21);
           
           color: #fff;
           content: '✔';

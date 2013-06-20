@@ -4,6 +4,12 @@ $(document).keyup(function(e) {
   }
 });
 
-// $('.reveal').click(function() {
-//   $('.overlay').toggleClass('is-shown');
-// });
+$('.reveal').click(function() {
+  // Rename is-modal
+  $('body').addClass('test');
+});
+
+$('.modal-close').click(function() {
+  // Rename is-modal
+  $('body').removeClass('test');
+});

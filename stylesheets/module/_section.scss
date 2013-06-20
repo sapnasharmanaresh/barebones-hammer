@@ -1,5 +1,22 @@
+.section {
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.section--main {
+  margin-bottom: em(40);
+  outline: 1px solid pink;
+}
+
+.section--sub {
+  margin-bottom: em(20);
+  outline: 1px solid green;
+}
+
 .section-sub {
   margin-bottom: em(40);
+  outline: 1px solid red;
   &:last-of-type {
     margin-bottom: 0;
   }
