@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Barebones • Media</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic">
+    
+    
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  </head>
+  <body>
+    <nav class="l-header">
+      <div class="l-constrained">
+        <ul class="nav nav--center nav--primary">
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#navigation">Navigation</a></li>
+          <li><a href="#table">Table</a></li>
+          <li><a href="#form">Form</a></li>
+          <li><a href="#button">Button</a></li>
+          <li><a class="reveal" href="#overlay">i</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="l-constrained">
+      <div class="hero">
+        <div class="tagline">
+          <h1 class="giga">Barebones</h1>
+          <p class="lead">Barebones is a light CSS framework that uses a SMACSS approach.</p>
+        </div>
+        
+        <ul class="l-inline cta">
+          <li><a class="btn btn--big" href="#none">View on Github</a></li>
+          <li><a class="btn btn--big" href="#none">Get Hammer Template</a></li>
+        </ul>
+      </div>
+    </div>
+
+  <div class="l-constrained">
+    <section>
+      <h2>Media</h2>
+      
+      <section class="l-section">
+        <h3>Header</h3>
+        
+        <div class="media">
+          <div class="media-pull-left">
+            <img src='http://placehold.it/200x200' width='200' height='200' alt='Placeholder Image' />
+          </div>
+          <div class="media-body">
+            <p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.</p>
+          </div>
+        </div>
+        
+        <div class="media">
+          <div class="media-pull-right">
+            <img src='http://placehold.it/200x200' width='200' height='200' alt='Placeholder Image' />
+          </div>
+          <div class="media-body">
+            <p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="l-section">
+        <h3>Flag</h3>
+      
+        <div class="flag">
+          <div class="flag-pull-left">
+            <img src='http://placehold.it/100x100' width='100' height='100' alt='Placeholder Image' />
+          </div>
+          <div class="flag-body">
+            <p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et.</p>
+          </div>
+        </div>
+          
+        <div class="flag">
+          <div class="flag-body">
+            <p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et.</p>
+          </div>
+          <div class="flag-pull-right">
+            <img src='http://placehold.it/100x100' width='100' height='100' alt='Placeholder Image' />
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+    
+      <div class="overlay" id="overlay">
+        <div class="overlay-center">
+          <div class="overlay-modal">
+            <a href="#none">x</a>
+            
+            <h3>Colophon</h3>
+            
+            <p>I've included a lot of <a href="https://github.com/kachunchau/scss-boilerplate">abstrast classes</a> that I regularly use for my daily web projects. Instead of including jQuery I'm using Zepto because I've realised most of the time I'm just adding toggling classes. Did I say it's a Hammer template as well. I've included some basic styling to allow you to extend it yourself.</p>
+            
+            <h4>Features</h4>
+            
+            <ul>
+              * Uses 'normalize.css' by [Nicolas Gallagher](https://github.com/necolas)
+              * Uses Zepto instead of jQuery
+              * SMACSS folder layout
+              * Added module abstracts
+              * Px to em and px to rem mixin
+              * Media object by [Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)
+              * Flag object by [Harry Roberts](http://csswizardry.com/2013/05/the-flag-object/)
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="l-footer">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-size="large">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </footer>
+    </div>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
+    <script>window.Zepto || document.write('<script src="javascript/vendor/zepto.min.js"><\/script>')</script>
+    <script src="javascript/plugins.js"></script>
+    <script src="javascript/main.js"></script>
+  </body>
+</html>
