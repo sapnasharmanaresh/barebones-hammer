@@ -9,10 +9,19 @@
     display: inline-block;
     padding: .3em .6em;
   }
+}
+
+.nav--control {
+  @include respond-to(small) {
+    display: none;
+  }
+}
+
+.nav--mobile {
+  display: none;
   
-  .reveal {
-    padding-right: 0;
-    padding-left: 0;
+  @include respond-to(small) {
+    display: block;
   }
 }
 
@@ -25,11 +34,28 @@
 
 .nav--primary {
   margin-bottom: 0;
-  text-align: justify;
+  // text-align: justify;
   &:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
+    // content: '';
+    // display: inline-block;
+    // width: 100%;
+  }
+  
+  > li {
+    display: block;
+    
+    @include respond-to(small) {
+      display: inline-block;
+    }
+  }
+  
+  @include respond-to(small) {
+    text-align: justify;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
   }
 }
 
