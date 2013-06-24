@@ -35,7 +35,7 @@ h2,
   @include respond-to(small) {
     @include font-size(30);
     
-    letter-spacing: -.05em;
+    // letter-spacing: -.05em;
   }
 }
 h3,
@@ -75,7 +75,11 @@ h5,
 h6 {
   font-family: $title;
     
-  margin: 0 0 .5em;
+  // margin: 0 0 .5em;
+}
+
+.title {
+  font-weight: 400;
 }
 
 p,
