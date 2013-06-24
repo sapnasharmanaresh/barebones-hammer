@@ -9,13 +9,14 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transition: all .25s ease-out .25s;
+  -webkit-transition: transform .25s ease-out .25s;
           transition: transform .25s ease-out .25s;
   -webkit-transform: scale(.6);
           transform: scale(.6);
   width: 90%;
   
   @include respond-to(small) {
+    margin-top: -#{em(195)};
     margin-left: -#{em(400)};
     max-width: em(800);
   }
