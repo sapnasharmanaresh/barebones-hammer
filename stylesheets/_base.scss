@@ -10,7 +10,7 @@ html, button, input, select, textarea {
   text-rendering: optimizeLegibility;
 }
 
-// http://modularscale.com/scale/?px1=18&px2=700&ra1=1.618&ra2=0
+// http://modularscale.com/scale/?px1=21&px2=800&ra1=1.618&ra2=0
 .giga {
   @include font-size(54);
   
@@ -22,20 +22,18 @@ html, button, input, select, textarea {
   }
 }
 .mega {
-  @include font-size(63);
+  @include font-size(72);
 }
 h1,
 .alpha {
-  @include font-size(40);
+  @include font-size(44);
 }
 h2,
 .beta {
   @include font-size(24);
   
   @include respond-to(small) {
-    @include font-size(30);
-    
-    // letter-spacing: -.05em;
+    @include font-size(33);
   }
 }
 h3,
@@ -43,7 +41,7 @@ h3,
   @include font-size(21);
   
   @include respond-to(small) {
-    @include font-size(24);
+    @include font-size(26);
   }
 }
 h4,
@@ -74,12 +72,13 @@ h4,
 h5,
 h6 {
   font-family: $title;
-    
-  // margin: 0 0 .5em;
+  margin-top: 0;
 }
 
 .title {
   font-weight: 400;
+  margin: 0  ;
+  // text-align: center;
 }
 
 p,
@@ -99,6 +98,10 @@ dl {
   
   &:last-child {
     margin-bottom: 0;
+  }
+  
+  @include respond-to(small) {
+    margin-bottom: em(33, 21);
   }
 }
 

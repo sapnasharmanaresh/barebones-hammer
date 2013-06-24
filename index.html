@@ -3,29 +3,29 @@
 
     <div class="l-constrained">
       <section class="l-row" id="about">
-        <div class="section section--main">
-          <h2>About</h2>
-          
-          <p>I've included a lot of <a href="https://github.com/kachunchau/scss-boilerplate">abstrast classes</a> that I regularly use for my daily web projects. Instead of including jQuery I'm using Zepto because I've realised most of the time I'm just adding toggling classes. Did I say it's a Hammer template as well. I've included some basic styling to allow you to extend it yourself.</p>
-        </div>
+        <header class="section-header">
+          <h2 class="title">About</h2>
+        </header>
         
-        <div class="section section--main">
-          <h2>Features</h2>
-          
-          <ul>
-            <li>Uses 'normalize.css' by <a href="ttps://github.com/necolas">Nicolas Gallagher</a></li>
-            <li>Uses Zepto instead of jQuery</li>
-            <li>SMACSS folder layout</li>
-            <li>Added module abstracts</li>
-            <li>Px to em and px to rem mixin
-            <li>Media object by <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code">Nicole Sullivan</a></li>
-            <li>Flag object by <a href="http://csswizardry.com/2013/05/the-flag-object/">Harry Roberts</a></li>
-          </ul>
-        </div>
+        <p>I've included a lot of <a href="https://github.com/kachunchau/scss-boilerplate">abstrast classes</a> that I regularly use for my daily web projects. Instead of including jQuery I'm using Zepto because I've realised most of the time I'm just adding toggling classes. Did I say it's a Hammer template as well. I've included some basic styling to allow you to extend it yourself.</p>
+        
+        <h3>Features</h3>
+                
+        <ul>
+          <li>Uses 'normalize.css' by <a href="ttps://github.com/necolas">Nicolas Gallagher</a></li>
+          <li>Uses Zepto instead of jQuery</li>
+          <li>SMACSS folder layout</li>
+          <li>Added module abstracts</li>
+          <li>Px to em and px to rem mixin
+          <li>Media object by <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code">Nicole Sullivan</a></li>
+          <li>Flag object by <a href="http://csswizardry.com/2013/05/the-flag-object/">Harry Roberts</a></li>
+        </ul>
       </section>
       
       <section class="l-row" id="typography">
-        <h2 class="title">Typography</h2>
+        <header class="section-header">
+          <h2 class="title">Typography</h2>
+        </header>
         
         <section class="section section--main">
           <h3>Paragraph</h3>
@@ -101,10 +101,12 @@
       </section>
       
       <section class="l-row" id="navigation">
-        <h2 class="title">Navigation</h2>
+        <header class="section-header">
+          <h2 class="title">Navigation</h2>
+        </header>
         
         <section class="section section--main">
-          <h3>Navigation Inline</h3>
+          <h3>Inline</h3>
           
           <ul class="nav nav--inline">
             <li><a href="#none">Home</a></li>
@@ -115,7 +117,7 @@
         </section>
         
         <section class="section section--main">
-          <h3>Navigation Stacked</h3>
+          <h3>Stacked</h3>
           
           <ul class="nav nav--stacked">
             <li><a href="#none">Home</a></li>
@@ -127,7 +129,9 @@
       </section>
       
       <section class="l-row" id="table">
-        <h2>Table</h2>
+        <header class="section-header">
+          <h2 class="title">Table</h2>
+        </header>
         
         <table class="table table-responsive">
           <thead>
@@ -172,7 +176,9 @@
       </section>
       
       <section class="l-row" id="form">
-        <h2 class="title">Form</h2>
+        <header class="section-header">
+          <h2 class="title">Form</h2>
+        </header>
         
         <section class="section section--main">
           <h3>Input</h3>
@@ -243,7 +249,9 @@
       </section>
       
       <section class="l-row" id="module">
-        <h2 class="title">Module</h2>
+        <header class="section-header">
+          <h2 class="title">Module</h2>
+        </header>
      
         <section class="section section--main">
           <h3>Button</h3>
@@ -284,11 +292,29 @@
         
           <div class="media section section--sub">
             <div class="media-pull-left">
-              <!-- @placeholder 400x400 -->
+              <!-- @placeholder 256x190 -->
             </div>
             
-            <div class="media-body"></div>
+            <div class="media-body">
+              <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci.</p>
+            </div>
           </div>
+          
+          <div class="media section section--sub">
+            <div class="media-pull-right">
+              <!-- @placeholder 256x190 -->
+            </div>
+            
+            <div class="media-body">
+              <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci.</p>
+            </div>
+          </div>
+        </section>
+        
+        <section class="section--main">
+          <h3>Modal</h3>
+          
+          <a class="btn" href="#overlay">Open Modal</a>
         </section>
       </section>
     

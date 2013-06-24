@@ -5,11 +5,28 @@
 }
 
 .section--main {
-  margin-bottom: em(63);
-  // outline: 1px solid red;
+  margin-bottom: em(33);
+  
+  @include respond-to(small) {
+    margin-bottom: em(72);
+  }
 }
 
 .section--sub {
-  margin-bottom: em(30);
-  // outline: 1px solid red;
+  margin-bottom: em(21);
+  
+  @include respond-to(small) {
+    margin-bottom: em(33);
+  }
+}
+
+.section-header {
+  border-bottom: 1px solid $primary-color;
+  margin-bottom: em(26);
+  padding-bottom: em(16);
+  
+  @include respond-to(small) {
+    margin-bottom: em(44);
+    padding-bottom: em(21);
+  }
 }
