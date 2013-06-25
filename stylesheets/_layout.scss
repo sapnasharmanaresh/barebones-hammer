@@ -23,15 +23,18 @@
   border-bottom: 1px solid $primary-color;
   box-shadow: 0 1px 2px rgba(#000, .05);
   padding-top: 1.1em;
-  padding-bottom: .2em;
+  padding-bottom: 1.1em;
   position: fixed;
   right: 0;
   left: 0;
   z-index: 1;
   
+  h1 {
+    margin: 0;
+  }
+  
   @include respond-to(small) {
-    padding-top: 1.8em;
-    padding-bottom: .2em;
+    display: none;
   }
 }
 
@@ -43,7 +46,6 @@
   margin-right: auto;
   margin-left: auto;
   max-width: rem(800);
-  // outline: 1px solid red;
   padding-right: em(18);
   padding-left: em(18);
 }

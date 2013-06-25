@@ -16,6 +16,8 @@ html, button, input, select, textarea {
   
   letter-spacing: -.03em;
   line-height: 1;
+  
+  text-transform: uppercase;
 
   @include respond-to(small) {
     @include font-size(88);
@@ -23,6 +25,8 @@ html, button, input, select, textarea {
 }
 .mega {
   @include font-size(72);
+  
+  text-transform: uppercase;
 }
 h1,
 .alpha {

@@ -4,6 +4,10 @@ $(document).keyup(function(e) {
   }
 });
 
+$('.menu-link').on('click', function () {
+  $('.drawer').toggleClass('is-visibile');
+});
+
 $('.reveal').click(function() {
   // Rename is-modal
   $('body').addClass('test');

@@ -23,10 +23,10 @@
 .section-header {
   border-bottom: 1px solid $primary-color;
   margin-bottom: em(26);
-  padding-bottom: em(16);
+  padding-bottom: em(10);
   
   @include respond-to(small) {
     margin-bottom: em(44);
-    padding-bottom: em(21);
+    padding-bottom: em(18);
   }
 }
