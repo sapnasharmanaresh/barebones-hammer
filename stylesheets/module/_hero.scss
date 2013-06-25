@@ -1,16 +1,19 @@
 .hero {
-  // outline: 1px solid red;
-  padding-top: em(70 + 70);
-  padding-bottom: em(80);
+  padding-top: em(54);
+  padding-bottom: em(54);
   text-align: center;
   
   .giga,
   .mega {
-    margin-bottom: .2em;
+    margin-bottom: .1em;
+    
+    @include respond-to(small) {
+      margin-bottom: .2em;
+    }
   }
   
   @include respond-to(small) {
-    padding-top: em(130 + 106);
-    padding-bottom: em(160);
+    padding-top: em(140 + 90);
+    padding-bottom: em(140);
   }
 }

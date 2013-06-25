@@ -24,9 +24,14 @@ html, button, input, select, textarea {
   }
 }
 .mega {
-  @include font-size(72);
-  
+  @include font-size(40);
+
+  letter-spacing: .05em;
   text-transform: uppercase;
+  
+  @include respond-to(small) {
+    @include font-size(72);
+  }
 }
 h1,
 .alpha {
@@ -34,7 +39,7 @@ h1,
 }
 h2,
 .beta {
-  @include font-size(24);
+  @include font-size(26);
   
   @include respond-to(small) {
     @include font-size(33);
@@ -43,6 +48,8 @@ h2,
 h3,
 .gamma {
   @include font-size(21);
+  
+  margin-bottom: em(10, 21);
   
   @include respond-to(small) {
     @include font-size(26);
@@ -77,12 +84,6 @@ h5,
 h6 {
   font-family: $title;
   margin-top: 0;
-}
-
-.title {
-  font-weight: 400;
-  margin: 0  ;
-  // text-align: center;
 }
 
 p,
@@ -127,11 +128,6 @@ html {
 body {
   font-size: 1em;
   line-height: 1.5;
-  
-  &.test {
-    // background-color: red;
-    overflow: hidden;
-  }
 }
 
 ::-moz-selection {
@@ -155,7 +151,6 @@ img {
 blockquote {
   font-style: italic;
   margin-left: 0;
-  // padding-left: em(42, 16);
   
   p {
     @include font-size(20);

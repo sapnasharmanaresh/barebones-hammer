@@ -22,11 +22,18 @@
 
 .section-header {
   border-bottom: 1px solid $primary-color;
-  margin-bottom: em(26);
-  padding-bottom: em(10);
+  margin-bottom: em(33);
+  padding-bottom: em(4);
   
   @include respond-to(small) {
     margin-bottom: em(44);
-    padding-bottom: em(18);
+    padding-bottom: em(14);
   }
+}
+
+
+.section-title {
+  color: darken(#ccc, 20%);
+  font-weight: 400;
+  margin: 0  ;
 }

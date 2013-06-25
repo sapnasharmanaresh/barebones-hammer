@@ -19,15 +19,10 @@
 }
 
 .l-header {
-  background-color: #fff;
-  border-bottom: 1px solid $primary-color;
-  box-shadow: 0 1px 2px rgba(#000, .05);
+  @include bar();
+
   padding-top: 1.1em;
   padding-bottom: 1.1em;
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1;
   
   h1 {
     margin: 0;

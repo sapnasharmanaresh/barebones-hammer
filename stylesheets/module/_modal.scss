@@ -1,9 +1,13 @@
 .modal {
+  $height: 384px;
+  $width: 90%;
+  
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 0 40px rgba(#000, .5);
-  margin-top: -#{em(100)};
-  margin-left: -45%;
+  height: em(384);
+  margin-top: -#{em(192)};
+  margin-left: -#{$width / 2};
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -12,12 +16,15 @@
           transition: transform .25s ease-in-out .25s, opacity .25s ease-out;
   -webkit-transform: scale(.75);
           transform: scale(.75);
-  width: 90%;
+  width: $width;
   
   @include respond-to(small) {
-    margin-top: -#{em(195)};
-    margin-left: -#{em(400)};
-    max-width: em(800);
+    $height: 384px;
+    $width: 800;
+    
+    margin-top: -#{em($height / 2)};
+    margin-left: -#{em($width / 2)};
+    width: em($width);
   }
 }
 

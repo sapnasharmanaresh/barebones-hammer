@@ -1,11 +1,12 @@
 table {
+  // display: none;
   width: 100%;
   
   h1,
   h2,
   h3,
   h4,
-  h5, 
+  h5,
   h6 {
     // @todo removes the margin for display purposes
     margin-bottom: 0;
@@ -15,6 +16,40 @@ table {
     @include font-size(18);
     
     table-layout: fixed;
+  }
+}
+
+.display-table {
+  // display: inline-block;
+  // width: 100%;
+  
+  tbody {
+    // overflow-x: auto;
+    // white-space: nowrap;
+    // width: auto;
+    
+    @include respond-to(small) {
+      
+    }
+  }
+  
+  tr {
+    float: left;
+    width: 100%;
+    
+    @include respond-to(small) {
+      display: table-row;
+      float: none;
+    }
+  }
+  
+  td {
+    border-bottom: 1px solid $primary-color;
+    display: block;
+    
+    @include respond-to(small) {
+      display: table-cell;
+    }
   }
 }
 

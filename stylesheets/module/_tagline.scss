@@ -1,12 +1,7 @@
 .tagline {
-  margin-bottom: em(44, 20);
+  margin-bottom: em(21, 16);
 
-  p {
-    // font-weight: 700;
-    // @include font-size(30)
-    // @extend %all-caps;
-    
-    // font-style: normal;
-    // outline: 1px solid red;
+  @include respond-to(small) {
+    margin-bottom: em(44, 16);
   }
 }
