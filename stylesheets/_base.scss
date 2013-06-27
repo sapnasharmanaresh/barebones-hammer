@@ -6,28 +6,26 @@
 html, button, input, select, textarea {
   color: #333;
   font-family: $body;
-  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
   text-rendering: optimizeLegibility;
 }
 
 // http://modularscale.com/scale/?px1=21&px2=800&ra1=1.618&ra2=0
 .giga {
+  @extend %all-caps;
+  
   @include font-size(54);
   
-  letter-spacing: -.03em;
   line-height: 1;
   
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   @include respond-to(small) {
-    @include font-size(88);
+    @include font-size(90);
   }
 }
 .mega {
   @include font-size(40);
-
-  letter-spacing: .05em;
-  text-transform: uppercase;
   
   @include respond-to(small) {
     @include font-size(72);
@@ -40,19 +38,17 @@ h1,
 h2,
 .beta {
   @include font-size(26);
-  
+
   @include respond-to(small) {
     @include font-size(33);
   }
 }
 h3,
 .gamma {
-  @include font-size(21);
-  
-  margin-bottom: em(10, 21);
+  @include font-size(22);
   
   @include respond-to(small) {
-    @include font-size(26);
+    @include font-size(27);
   }
 }
 h4,
@@ -60,7 +56,7 @@ h4,
   @include font-size(18);
   
   @include respond-to(small) {
-    @include font-size(21);
+    @include font-size(22);
   }
 }
 h5,
@@ -74,6 +70,10 @@ h5,
 h6,
 .zeta {
   @include font-size(16);
+    
+  @include respond-to(small) {
+    @include font-size(18);
+  }
 }
 
 h1,
@@ -82,32 +82,28 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $title;
-  margin-top: 0;
+  font-weight: 400;
+  margin: 0 0 rem(22);
 }
 
 p,
 ul,
 ol,
 dl {
-  @include respond-to(small) {
-    @include font-size(21);
-  }
-}
-
-p,
-ul,
-ol,
-dl {
-  margin: 0 0 1em;
-  
+  color: lighten(#333, 20%);
   &:last-child {
     margin-bottom: 0;
   }
   
   @include respond-to(small) {
-    margin-bottom: em(33, 21);
+    @include font-size(22);
+    
+    margin: 0 0 rem(33);
   }
+}
+
+dt {
+  font-weight: 400;
 }
 
 .lead {
@@ -150,6 +146,8 @@ img {
 
 blockquote {
   font-style: italic;
+  margin-top: 0;
+  margin-right: 0;
   margin-left: 0;
   
   p {
@@ -172,6 +170,13 @@ blockquote {
       @include font-size(21);
     }
   }
+}
+
+code {
+  @include font-size(18);
+  
+  color: lighten(#333, 20%);
+  font-family: 'Inconsolata', sans-serif;
 }
 
 a {
@@ -232,6 +237,6 @@ textarea {
     color: inherit;
   }
   @include respond-to(small) {
-    @include font-size(20);
+    @include font-size(22);
   }
 }

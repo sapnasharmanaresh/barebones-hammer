@@ -37,6 +37,8 @@
 input {
   &[type=radio],
   &[type=checkbox] {
+    display: none;
+    
     &:checked {
       + .input-replacement {
         background-color: lighten(#ccc, 15%);
@@ -44,9 +46,7 @@ input {
     }
   }
   
-  &[type=radio] {
-    @extend %hidden;
-    
+  &[type=radio] {    
     position: relative;
     &:checked {
       + .input-replacement--radio {

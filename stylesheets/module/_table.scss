@@ -1,5 +1,4 @@
 table {
-  // display: none;
   width: 100%;
   
   h1,
@@ -13,7 +12,7 @@ table {
   }
   
   @include respond-to(small) {
-    @include font-size(18);
+    @include font-size(22);
     
     table-layout: fixed;
   }
