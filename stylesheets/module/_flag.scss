@@ -10,8 +10,17 @@
   vertical-align: middle;
 }
 
+.flag-body {
+
+}
+
 .flag-pull-left {
   padding-right: em(20);
+}
+
+.flag-pull-left--btn {
+  outline: 1px solid red;
+  width: 50%;
 }
 
 .flag-pull-right {

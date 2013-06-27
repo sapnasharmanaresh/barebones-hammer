@@ -16,10 +16,8 @@ html, button, input, select, textarea {
   
   @include font-size(54);
   
-  line-height: 1;
+  line-height: 1.1;
   
-  // text-transform: uppercase;
-
   @include respond-to(small) {
     @include font-size(90);
   }
@@ -135,7 +133,16 @@ body {
 }
 
 figure {
-  margin-bottom: em(21, 16);
+  margin-bottom: rem(33);
+
+  img {
+    display: block;
+    margin-bottom: rem(11);
+  }
+}
+
+figcaption {
+  @include font-size(22);
 }
 
 img {
@@ -167,15 +174,15 @@ blockquote {
     }
     
     @include respond-to(small) {
-      @include font-size(21);
+      @include font-size(22);
     }
   }
 }
 
 code {
-  @include font-size(18);
+  @include font-size(22);
   
-  color: lighten(#333, 20%);
+  color: #C14B3E;
   font-family: 'Inconsolata', sans-serif;
 }
 
