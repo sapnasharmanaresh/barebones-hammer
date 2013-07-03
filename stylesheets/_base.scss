@@ -14,7 +14,7 @@ html, button, input, select, textarea {
 .giga {
   @extend %all-caps;
   
-  @include font-size(54);
+  @include font-size(44);
   
   line-height: 1.1;
   
@@ -23,7 +23,7 @@ html, button, input, select, textarea {
   }
 }
 .mega {
-  @include font-size(40);
+  @include font-size(44);
   
   @include respond-to(small) {
     @include font-size(72);
@@ -92,7 +92,7 @@ p,
 ul,
 ol,
 dl {
-  color: lighten(#333, 20%);
+  color: lighten(#333, 4%);
   margin: 0 0 1em;
   &:last-child {
     margin-bottom: 0;
@@ -103,13 +103,6 @@ dl {
     
     margin: 0 0 rem(33);
   }
-}
-
-ul,
-ol {
-  // margin-left: 0;
-  // padding-left: rem(22);
-  // margin-left: rem(20);
 }
 
 dt {
