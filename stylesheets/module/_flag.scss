@@ -18,16 +18,46 @@
   padding-right: em(20);
 }
 
-.flag-pull-left--btn {
-  outline: 1px solid red;
-  width: 50%;
-}
-
 .flag-pull-right {
   padding-left: em(20);
   text-align: right;
   
   img {
-    float: right; /* This is the only way to float it to the right for now */
+    /* This is the only way to float it to the right for now */
+    float: right;
+  }
+}
+
+/* Custom styles for Barebones
+   ========================================================================== */
+
+.flag-pull-left-desktop,
+.flag-pull-right-desktop,
+.flag-body-desktop {
+  @include respond-to(small) {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.flag-pull-left-desktop {
+  margin-bottom: rem(4);
+  // outline: 1px solid red;
+  
+  @include respond-to(small) {
+    margin-bottom: 0;
+  }
+}
+
+.flag-pull-left--btn {
+  @include respond-to(small) {
+    width: 50%;
+  }
+}
+
+.flag-pull-right {
+  iframe {
+    /* Aligns the Twitter button */
+    vertical-align: middle;
   }
 }

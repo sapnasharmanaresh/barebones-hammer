@@ -20,14 +20,8 @@ nav {
   }
 }
 
-.nav--control {
-  @include respond-to(small) {
-    display: none;
-  }
-}
-
 .drawer {
-  -webkit-transform: translate3d(0, -174px, 0);
+  -webkit-transform: translate3d(0, -230px, 0);
   -webkit-transition: -webkit-transform .25s ease-out;
   
   @include respond-to(small) {
@@ -36,7 +30,7 @@ nav {
 }
 
 .is-pulled-down {
-  -webkit-transform: translate3d(0, 74px, 0);
+  -webkit-transform: translate3d(0, 66px, 0);
   
   @include respond-to(small) {
     -webkit-transform: none;
@@ -68,7 +62,7 @@ nav {
   a {
     border-bottom: 1px solid #fff;
     display: block;
-    padding: .5em em(18, 16);
+    padding: em(12) em(18);
     
     @include respond-to(small) {
       display: inline-block;

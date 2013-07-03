@@ -2,15 +2,16 @@
   @extend %clearfix;
 }
 
-.media-pull-left {
-  float: left;
-  margin-right: em(33, 16);
-}
-
 .media-pull-right {
   float: right;
-  margin-left: em(33, 16);
+  margin-left: rem(33, 16);
 }
+
+.media-pull-left {
+  float: left;
+  margin-right: rem(33, 16);
+}
+
 
 /*
  * 1. Create new block formatting context in modern browsers
@@ -22,4 +23,38 @@
 .media-body {
   display: table-cell; /* 1 */
   width: 10000px; /* 2 */
+}
+
+/* Custom styles for Barebones
+   ========================================================================== */
+
+.media-pull-right-desktop,
+.media-pull-left-desktop {
+  margin-bottom: rem(8);
+  
+  img {
+    width: 100%;
+    
+    @include respond-to(small) {
+      max-width: 100%;
+    }
+  }
+  
+  @include respond-to(small) {
+    margin-bottom: 0;
+  }
+}
+
+.media-pull-right-desktop {
+  @include respond-to(small) {
+    float: right;
+    margin-left: rem(33, 16);
+  }
+}
+
+.media-pull-left-desktop {
+  @include respond-to(small) {
+    float: left;
+    margin-right: rem(33, 16);
+  }
 }

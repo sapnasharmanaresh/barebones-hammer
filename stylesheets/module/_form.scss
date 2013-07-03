@@ -46,7 +46,7 @@ input {
     }
   }
   
-  &[type=radio] {    
+  &[type=radio] {
     position: relative;
     &:checked {
       + .input-replacement--radio {

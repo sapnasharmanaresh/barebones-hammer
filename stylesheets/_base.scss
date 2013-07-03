@@ -81,7 +81,11 @@ h4,
 h5,
 h6 {
   font-weight: 400;
-  margin: 0 0 rem(22);
+  margin: 0 0 rem(12);
+
+  @include respond-to(small) {
+    margin-bottom: rem(16);
+  }
 }
 
 p,
@@ -89,6 +93,7 @@ ul,
 ol,
 dl {
   color: lighten(#333, 20%);
+  margin: 0 0 1em;
   &:last-child {
     margin-bottom: 0;
   }
@@ -98,6 +103,13 @@ dl {
     
     margin: 0 0 rem(33);
   }
+}
+
+ul,
+ol {
+  // margin-left: 0;
+  // padding-left: rem(22);
+  // margin-left: rem(20);
 }
 
 dt {
@@ -142,7 +154,12 @@ figure {
 }
 
 figcaption {
-  @include font-size(22);
+  // @include font-size(22);
+
+
+  @include respond-to(small) {
+    @include font-size(22);
+  }
 }
 
 img {
@@ -158,7 +175,7 @@ blockquote {
   margin-left: 0;
   
   p {
-    @include font-size(20);
+    @include font-size(18);
     
     @include respond-to(small) {
       @include font-size(24);
@@ -166,24 +183,25 @@ blockquote {
   }
   
   .cite {
-    @include font-size(16);
-    
     font-style: normal;
     &:before {
       content: '\2014';
     }
-    
-    @include respond-to(small) {
-      @include font-size(22);
-    }
   }
 }
 
+pre {
+  margin: 0;
+}
+
 code {
-  @include font-size(22);
-  
   color: #C14B3E;
   font-family: 'Inconsolata', sans-serif;
+  
+  
+  @include respond-to(small) {
+    @include font-size(22);
+  }
 }
 
 a {
@@ -228,14 +246,15 @@ input[type=email],
 input[type=url],
 textarea {
   @include font-size(16);
-  
+
+  -webkit-appearance: none;
   border: 1px solid $primary-color;
   border-radius: 2px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #ccc;
   outline: none;
-  padding: .75em;
+  padding: rem(12);
   -webkit-transition: all .25s ease;
           transition: all .25s ease;
   width: 100%;
@@ -245,5 +264,7 @@ textarea {
   }
   @include respond-to(small) {
     @include font-size(22);
+    
+    padding: rem(22);
   }
 }

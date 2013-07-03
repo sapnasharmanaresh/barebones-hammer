@@ -1,12 +1,11 @@
 .modal {
-  $height: 384px;
   $width: 90%;
   
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 0 40px rgba(#000, .5);
-  height: em(384);
-  margin-top: -#{em(192)};
+  height: rem(348);
+  margin-top: -#{em(174)};
   margin-left: -#{$width / 2};
   opacity: 0;
   position: absolute;
@@ -30,10 +29,11 @@
 
 .modal-header,
 .modal-footer {
-  padding-top: 1em;
-  padding-right: 2em;
-  padding-bottom: 1em;
-  padding-left: 2em;
+  padding: rem(12) rem(18);
+  
+  @include respond-to(small) {
+    padding: rem(18);
+  }
 }
 
 .modal-header {
@@ -48,10 +48,12 @@
 .modal-body {
   height: em(200);
   overflow-y: auto;
-  padding-top: 1em;
-  padding-right: 2em;
-  padding-bottom: 1em;
-  padding-left: 2em;
+  padding: rem(12) rem(18);
+  
+  @include respond-to(small) {
+    padding-right: 2em;
+    padding-left: 2em;
+  }
 }
 
 .modal-footer {

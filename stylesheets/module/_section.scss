@@ -5,25 +5,25 @@
 }
 
 .section--main {
-  margin-bottom: em(33);
+  margin-bottom: rem(33);
   
   @include respond-to(small) {
-    margin-bottom: em(88);
+    margin-bottom: rem(88);
   }
 }
 
 .section--sub {
-  margin-bottom: em(21);
+  margin-bottom: rem(16);
   
   @include respond-to(small) {
-    margin-bottom: em(33);
+    margin-bottom: rem(33);
   }
 }
 
 .section-header {
   border-bottom: 1px solid $primary-color;
-  margin-bottom: em(33);
-  padding-bottom: em(4);
+  margin-bottom: rem(33);
+  padding-bottom: rem(4);
   
   @include respond-to(small) {
     margin-bottom: rem(33);
@@ -33,9 +33,6 @@
 
 
 .section-title {
-  // @include font-size(26);
-  
   color: darken(#ccc, 20%);
   margin: 0;
-  // text-transform: uppercase;
 }

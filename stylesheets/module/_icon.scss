@@ -1,0 +1,7 @@
+.icon {
+  margin-right: rem(4);
+
+  @include respond-to(small) {
+    margin-right: rem(10);
+  }
+}

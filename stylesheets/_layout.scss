@@ -1,3 +1,14 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+/**
+ * Layout styles for lists.
+ *
+ * Used for list items to remove the bullets and margins. The different classes
+ * refer to the different layouts you want to use.
+ */
+
 .l-stacked,
 .l-inline,
 .l-grid {
@@ -7,6 +18,7 @@
 .l-inline {
   > li {
     display: inline-block;
+    outline: 1px solid red;
   }
 }
 
@@ -18,11 +30,14 @@
   }
 }
 
+/* Custom styles for Barebones
+   ========================================================================== */
+
 .l-header {
   @include bar();
 
-  padding-top: 1.1em;
-  padding-bottom: 1.1em;
+  padding-top: rem(12);
+  padding-bottom: rem(12);
   
   h1 {
     margin: 0;
@@ -43,14 +58,20 @@
   margin-right: auto;
   margin-left: auto;
   max-width: rem(900);
-  padding-right: em(18);
-  padding-left: em(18);
+  padding-right: rem(12);
+  padding-left: rem(12);
+  
+  @include respond-to(small) {
+    padding-right: rem(18);
+    padding-left: rem(18);
+  }
 }
 
 .l-row {
-  margin-bottom: em(72);
+  margin-bottom: rem(50);
+  // outline: 1px solid red;
   
   @include respond-to(small) {
-    margin-bottom: em(88);
+    margin-bottom: rem(88);
   }
 }

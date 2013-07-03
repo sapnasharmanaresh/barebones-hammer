@@ -1,4 +1,13 @@
-// Px to em sizing 
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/**
+ * Pixel conversions.
+ *
+ * Converts pixels to ems/rems depending on the mixing you're using.
+ */
+ 
 @function em($size, $context: $base-font-size) {
   @return ($size / $context) + em;
 }
@@ -20,9 +29,20 @@
   text-shadow: none;
 }
 
-// Breakpoints
-@mixin respond-to($screen) {
+/**
+ * Media queries
+ *
+ * These are based on the different device widths in _settings.scss.
+ * Allows you to use inline media queries.
+ *
+ * Example CSS:
+ * .foobar {
+ *   @include respond-to(big) {
+ *   }
+ * }
+ */
 
+@mixin respond-to($screen) {
   @if $screen == small{
     @media only screen and (min-width: $small) {
       @content;
@@ -38,10 +58,13 @@
       @content;
     }
   }
-
 }
-
-// Bar 
+ 
+/* Custom mixins for Barebones
+ ========================================================================== */
+ 
+// Main header style
+ 
 @mixin bar() {
   background-color: #fff;
   border-bottom: 1px solid $primary-color;
@@ -52,3 +75,17 @@
   left: 0;
   z-index: 2;
 }
+
+/**
+ * Buttons
+ *
+ * This customises your buttons with a different background color and text color. 
+ * If no text color is specified it will default to white.
+ */
+
+@mixin btn($color, $text-color: #fff) {
+  background-color: $color;
+  border-color: darken($color, 6%);
+  color: $text-color;
+}
+ 
