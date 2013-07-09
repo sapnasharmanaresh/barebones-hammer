@@ -1,20 +1,16 @@
 .hero {
-  padding-top: em(80);
-  padding-bottom: em(80);
+  padding-top: rem(80);
+  padding-bottom: rem(80);
   text-align: center;
   
   .giga,
   .mega {
     font-weight: 700;
-    margin-bottom: .1em;
-    
-    @include respond-to(small) {
-      margin-bottom: .2em;
-    }
+    margin-bottom: .25em;
   }
   
   @include respond-to(small) {
-    padding-top: em(140 + 90);
-    padding-bottom: em(140);
+    padding-top: rem(140 + 90);
+    padding-bottom: rem(140);
   }
 }

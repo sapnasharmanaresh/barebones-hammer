@@ -63,6 +63,7 @@
   border-top: 1px solid $primary-color;
   padding-top: em(33);
   padding-bottom: em(33);
+  text-align: center;
   
   @include respond-to(small) {
     padding-top: rem(60);
@@ -85,7 +86,6 @@
 
 .l-row {
   margin-bottom: rem(50);
-  // outline: 1px solid red;
   
   @include respond-to(small) {
     margin-bottom: rem(88);

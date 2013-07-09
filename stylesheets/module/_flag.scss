@@ -42,7 +42,6 @@
 
 .flag-pull-left-desktop {
   margin-bottom: rem(4);
-  // outline: 1px solid red;
   
   @include respond-to(small) {
     margin-bottom: 0;
@@ -60,4 +59,8 @@
     /* Aligns the Twitter button */
     vertical-align: middle;
   }
+}
+
+.flag-body-desktop {
+  text-align: right;
 }
