@@ -1,8 +1,7 @@
 Barebones
 =========
 
-A 'naked' boilerplate for quickly starting off your projects. The CSS is handled with a SMACSS structure for maintainability.
-
+Style guide based on my SCSS boilerplate.
 
 ## Any thoughts?
 
