@@ -2,14 +2,12 @@
   @extend %clearfix;
 }
 
-.media-pull-right {
+.pull-right {
   float: right;
-  margin-left: rem(33, 16);
 }
 
-.media-pull-left {
+.pull-left {
   float: left;
-  margin-right: rem(33, 16);
 }
 
 
@@ -28,8 +26,8 @@
 /* Custom styles for Barebones
    ========================================================================== */
 
-.media-pull-right-desktop,
-.media-pull-left-desktop {
+.pull-right-desktop,
+.pull-left-desktop {
   margin-bottom: rem(8);
   
   img {
@@ -45,16 +43,16 @@
   }
 }
 
-.media-pull-right-desktop {
+.pull-right-desktop {
   @include respond-to(small) {
     float: right;
-    margin-left: rem(33, 16);
+    margin-left: rem(33);
   }
 }
 
-.media-pull-left-desktop {
+.pull-left-desktop {
   @include respond-to(small) {
     float: left;
-    margin-right: rem(33, 16);
+    margin-right: rem(33);
   }
 }
