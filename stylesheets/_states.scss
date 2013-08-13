@@ -25,3 +25,8 @@
 .is-not-scrollable {
   overflow: hidden;
 }
+
+.is-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
