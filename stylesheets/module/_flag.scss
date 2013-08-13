@@ -3,64 +3,26 @@
   width: 100%;
 }
 
-.flag-pull-right,
-.flag-pull-left,
-.flag-body {
+.table-cell {
   display: table-cell;
   vertical-align: middle;
 }
 
-.flag-body {
-
+.table-cell--left {
+  padding-right: rem(22);
 }
 
-.flag-pull-left {
-  padding-right: em(20);
-}
-
-.flag-pull-right {
-  padding-left: em(20);
-  text-align: right;
-  
-  img {
-    /* This is the only way to float it to the right for now */
-    float: right;
-  }
+.table-cell--right {
+  padding-left: rem(22);
 }
 
 /* Custom styles for Barebones
    ========================================================================== */
 
-.flag-pull-left-desktop,
-.flag-pull-right-desktop,
-.flag-body-desktop {
-  @include respond-to(small) {
-    display: table-cell;
-    vertical-align: middle;
-  }
-}
-
-.flag-pull-left-desktop {
-  margin-bottom: rem(4);
+.table-cell--btn {
+  width: rem(200);
   
-  @include respond-to(small) {
-    margin-bottom: 0;
-  }
-}
-
-.flag-pull-left--btn {
   @include respond-to(small) {
     width: 50%;
   }
-}
-
-.flag-pull-right {
-  iframe {
-    /* Aligns the Twitter button */
-    vertical-align: middle;
-  }
-}
-
-.flag-body-desktop {
-  text-align: right;
 }
