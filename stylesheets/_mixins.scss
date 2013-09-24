@@ -80,6 +80,20 @@
   }
 }
 
+/**
+ * Retina image mixin
+ *
+ * Because the default Bourbon mixin uses it's own '_2x' for it's retinm assets. I've rolled 
+ * my own. Feel free to change '@2x' to whatever you comfortable with. Also don't forget about
+ * adding the background size.
+ */
+ 
+@mixin retina($imagename, $extension: jpg) {
+  @include hidpi() {
+    background-image: url($imagename + '@2x.' + $extension);
+  }
+}
+
 /* Custom mixins for Barebones
  ========================================================================== */
  
