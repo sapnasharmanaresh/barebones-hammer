@@ -62,48 +62,15 @@
 }
 
 
-/**
- * Loading spinner
- *
- * Automatically creates 12 spinner bars based on http://37signals.com/svn/posts/2577-loading-spinner-animation-using-css-and-webkit
- *
- * Example HTTML:
- *
- * <div class="spinner">
- *   <div class="spinner-bar spinner-bar--1"></div>
- *   <div class="spinner-bar spinner-bar--2"></div>
- *   <div class="spinner-bar spinner-bar--3"></div>
- *   <div class="spinner-bar spinner-bar--4"></div>
- *   <div class="spinner-bar spinner-bar--5"></div>
- *   <div class="spinner-bar spinner-bar--6"></div>
- *   <div class="spinner-bar spinner-bar--7"></div>
- *   <div class="spinner-bar spinner-bar--8"></div>
- *   <div class="spinner-bar spinner-bar--9"></div>
- *   <div class="spinner-bar spinner-bar--10"></div>
- *   <div class="spinner-bar spinner-bar--11"></div>
- *   <div class="spinner-bar spinner-bar--12"></div>
- * </div>
- */
-
 @mixin spinner($width, $height) {
   height: $height;
   display: inline-block;
   position: relative;
   width: $width;
-}
-
-/**
- * Individual spinner bars
- *
- * Automatically creates 12 spinner bars based on http://37signals.com/svn/posts/2577-loading-spinner-animation-using-css-and-webkit
- */
-
-@mixin spinner-bar() {
-  $time: 0.08333333333333333;
-  
-  @content;
   
   @for $i from 1 through 12 {
+    $time: 0.08333333333333333;
+
     .spinner-bar--#{$i} {
       -webkit-animation-delay: (0 - (-$time * $i)) + s;
               animation-delay: (0 - (-$time * $i)) + s;

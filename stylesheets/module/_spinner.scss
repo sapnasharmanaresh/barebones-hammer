@@ -7,7 +7,7 @@
   border-radius: 50px;
   -webkit-animation: fade 1s linear infinite;
           animation: fade 1s linear infinite;
-  box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 3px rgba(#000, .2);
   height: 26%;
   position: absolute;
   left: 44.5%;
@@ -16,17 +16,36 @@
   opacity: 0;
 }
 
+/**
+ * Loading spinner
+ *
+ * Automatically creates 12 spinner bars based on http://37signals.com/svn/posts/2577-loading-spinner-animation-using-css-and-webkit
+ *
+ * Example HTML:
+ *
+ * <div class="spinner">
+ *   <div class="spinner-bar spinner-bar--1"></div>
+ *   <div class="spinner-bar spinner-bar--2"></div>
+ *   <div class="spinner-bar spinner-bar--3"></div>
+ *   <div class="spinner-bar spinner-bar--4"></div>
+ *   <div class="spinner-bar spinner-bar--5"></div>
+ *   <div class="spinner-bar spinner-bar--6"></div>
+ *   <div class="spinner-bar spinner-bar--7"></div>
+ *   <div class="spinner-bar spinner-bar--8"></div>
+ *   <div class="spinner-bar spinner-bar--9"></div>
+ *   <div class="spinner-bar spinner-bar--10"></div>
+ *   <div class="spinner-bar spinner-bar--11"></div>
+ *   <div class="spinner-bar spinner-bar--12"></div>
+ * </div>
+ */
+
 @for $i from 1 through 12 {
-  $test: 0.08333333333333333;
-  
+  $time: 0.08333333333333333;
+
   .spinner-bar--#{$i} {
-    -webkit-animation-delay: (0 - (-$test * $i)) + s;
-            animation-delay: (0 - (-$test * $i)) + s;
+    -webkit-animation-delay: (0 - (-$time * $i)) + s;
+            animation-delay: (0 - (-$time * $i)) + s;
     -webkit-transform: rotate((30 * $i) + deg) translate(0, -142%);
             transform: rotate((30 * $i) + deg) translate(0, -142%);
   }
-}
-
-.test {
-  @include spinner-bar();
 }
