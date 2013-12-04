@@ -6,13 +6,11 @@
   box-shadow: 0 0 40px rgba(#000, .5);
   -moz-box-sizing: border-box;
        box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
   opacity: 0;
   -webkit-transition: opacity .25s ease .25s, -webkit-transform .25s ease-in-out .25s;
           transition: opacity .25s ease .25s, transform .25s ease-in-out .25s;
-  -webkit-transform: scale(.55);
-          transform: scale(.55);
+  -webkit-transform: scale(.75);
+          transform: scale(.75);
   width: $width;
   
   @include respond-to(small) {

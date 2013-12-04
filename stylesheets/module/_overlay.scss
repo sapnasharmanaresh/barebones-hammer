@@ -15,11 +15,14 @@
 }
 
 .overlay {
+  -webkit-align-items: center;
+          align-items: center;
   background-color: rgba(#000, .8);
-  display: table;
+  display: -webkit-flex;
+  display:         flex;
   height: 100%;
-  margin-right: auto;
-  margin-left: auto;
+  -webkit-justify-content: center;
+          justify-content: center;
   opacity: 0;
   position: fixed;
   top: 0;
