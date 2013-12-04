@@ -46,14 +46,15 @@
 
 .l-header {
   @include bar();
+  
+  -webkit-align-items: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  padding: rem(12);
 
-  padding-top: rem(12);
-  padding-bottom: rem(12);
-  
-  h1 {
-    margin: 0;
-  }
-  
   @include respond-to(small) {
     display: none;
   }
